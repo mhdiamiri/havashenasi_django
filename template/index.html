@@ -1,0 +1,38 @@
+<html dir="rtl" style>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <title>هواشناسی ایران</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #53db4e;">    
+        <div class="container">
+            <h1 style="font-family: 'Lalezar', cursive;">هواشناسی ایران</h1>
+        </div>
+    </nav>
+    <form role="form" method="GET" action="{% url 'index' %}">
+        <div class="container">
+            <br>
+            <p style="font-family: 'Lalezar', cursive; text-align:center;">نام شهر را وارد کنید:</p>
+        </div>
+
+        <div class="container">
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                </div>
+                <input name = "city_name" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                <button type="submit" class="btn btn-outline-success" style="font-family: 'Lalezar', cursive;" >جستجو</button>  
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <p style="white-space: pre-line;text-align:center; background-color: #c8ecc7;">{{result}}</p>
+    </div>
+</body>
+
+</html>
